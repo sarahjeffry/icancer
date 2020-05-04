@@ -1,0 +1,164 @@
+<div class="card border-primary">
+    <div class="card-header bg-primary text-white">
+        <h3 class="card-title">
+            <i class="fa fa-fw fa-align-justify"></i> Horizontal Scroll
+        </h3>
+    </div>
+
+    <div class="card-body">
+        <div id="table1_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="dataTables_length" id="table1_length">
+                        <label>Show
+                            <select name="table1_length" aria-controls="table1" class="form-control form-control-sm">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select> entries
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <div id="table1_filter" class="dataTables_filter">
+                        <label>Search patient:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="table1"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="dataTables_scroll">
+                        <div class="dataTables_scrollHead" style="overflow: hidden; position: relative; border: 0px; width: 100%;">
+                            <div class="dataTables_scrollHeadInner" style="box-sizing: content-box; width: 1090px; padding-right: 0px;">
+                                <table class="table horizontal_table table-striped dataTable no-footer" role="grid" style="margin-left: 0px; width: 1090px; padding:3px 5px;">
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="sorting_asc" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" aria-sort="ascending">MRN</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Patient's Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >NRIC</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Sex</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Height</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Weight</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >BMI</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Cancer Type</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Smoking?</th>
+                                            <th class="sorting" tabindex="0" aria-controls="table1" rowspan="1" colspan="1" >Actions</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+<!--                        style="height:0;overflow:hidden;"-->
+                        <div class="dataTables_scrollBody" style="position: relative; overflow: auto; width: 100%;">
+                            <table class="table horizontal_table table-striped dataTable no-footer" id="table1" role="grid" aria-describedby="table1_info" >
+                                <thead>
+                                    <tr role="row" style="height: 0px;">
+                                        <th class="sorting_asc" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-sort="ascending" aria-label="First name: activate to sort column descending">
+                                            <div class="dataTables_sizing">MRN</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="Last name: activate to sort column ascending">
+                                            <div class="dataTables_sizing">Patient's Name</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="Position: activate to sort column ascending">
+                                            <div class="dataTables_sizing">NRIC</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="Office: activate to sort column ascending">
+                                            <div class="dataTables_sizing">Sex</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="Age: activate to sort column ascending">
+                                            <div class="dataTables_sizing">Height</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="Start date: activate to sort column ascending">
+                                            <div class="dataTables_sizing" >Weight</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="Salary: activate to sort column ascending">
+                                            <div class="dataTables_sizing" >BMI</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="E-mail: activate to sort column ascending">
+                                            <div class="dataTables_sizing" >Cancer Type</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;"aria-label="E-mail: activate to sort column ascending">
+                                            <div class="dataTables_sizing">Smoking?</div>
+                                        </th>
+
+                                        <th class="sorting" aria-controls="table1" rowspan="1" colspan="1" style="padding:3px 5px;" aria-label="E-mail: activate to sort column ascending">
+                                            <div class="dataTables_sizing">Actions</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr role="row" class="odd">
+                                        <td class="sorting_1">MZZZZZ</td>
+                                        <td>Champlin Breitenberghaven</td>
+                                        <td>984322-10-2131</td>
+                                        <td>Female</td>
+                                        <td>168.5</td>
+                                        <td>65.4</td>
+                                        <td>23.54</td>
+                                        <td>Lung</td>
+                                        <td>No</td>
+                                        <td>EDIT     DELETE</td>
+                                    </tr>
+                                    <tr role="row" class="even">
+                                        <td class="sorting_1">MZZZZZ</td>
+                                        <td>Champlin Breitenberghaven</td>
+                                        <td>984322-10-2131</td>
+                                        <td>Female</td>
+                                        <td>168.5</td>
+                                        <td>65.4</td>
+                                        <td>23.54</td>
+                                        <td>Lung</td>
+                                        <td>No</td>
+                                        <td>EDIT     DELETE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-5">
+                    <div class="dataTables_info" id="table1_info" role="status" aria-live="polite">Showing 1 to 10 of 40 entries</div>
+                </div>
+                <div class="col-sm-12 col-md-7">
+                    <div class="dataTables_paginate paging_simple_numbers" id="table1_paginate">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="table1_previous">
+                                <a href="#" aria-controls="table1" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                            </li>
+                            <li class="paginate_button page-item active">
+                                <a href="#" aria-controls="table1" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="table1" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="table1" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                            </li>
+                            <li class="paginate_button page-item ">
+                                <a href="#" aria-controls="table1" data-dt-idx="4" tabindex="0" class="page-link">4</a>
+                            </li>
+                            <li class="paginate_button page-item next" id="table1_next">
+                                <a href="#" aria-controls="table1" data-dt-idx="5" tabindex="0" class="page-link">Next</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

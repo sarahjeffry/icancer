@@ -1,0 +1,136 @@
+
+
+.med_output, .short_output, .long_output  {
+    font-size: 14px;
+    height: 25px;
+    border-radius: 5px;
+    /*border: 1px solid #85929e;*/
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.long_output {
+    width: 550px;
+}
+
+.med_output {
+    width: 170px;
+}
+
+.short_output {
+    width: 70px;
+}
+
+.dropdowns, .short_input, .med_input, .long_input {
+    font-size: 14px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid #85929e;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.fillform:focus, .logindetails:focus {
+    border: 2px solid #1176C6;
+    background-color: white;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.ptdetails {
+
+    width: 1000px;
+    border-radius: 10px;
+    padding: 20px 10px 20px 20px; /*TOP RIGHT BOTTOM LEFT*/
+    height: 150px;
+    margin: 10px;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.backbtn {
+    font-size: 30px;
+    color: white;
+    padding: 1px 20px;
+    background-color: grey;
+    border-radius: 5px;
+    top: 90%;
+    left: 22%;
+    position: fixed;
+}
+
+
+.filltheform {
+    text-align: center;
+    background-color: #c4c4c4;
+    width: 1100px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.filltheform input[type=text]:focus, input[type=date]:focus, input[type=time]:focus, input[type=number]:focus,  {
+    border: solid 3px dodgerblue;
+    background-color: ghostwhite;
+    box-shadow: 0 0 15px lightskyblue;
+    -moz-box-shadow: 0 0 15px lightskyblue;
+    -webkit-box-shadow: 0 0 15px lightskyblue;
+    -o-box-shadow: 0 0 15px lightskyblue;
+}
+
+.dropdowns{
+    font-size: 14px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #85929e;
+    padding-left: 7px;
+    padding-right: 7px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+    -webkit-appearance: none;
+    background-position-x: 244px;
+}
+
+.savebtn{
+    font-size: 20px;
+    color: white;
+    background-color: #1176C6;
+    padding: 10px 1%;
+    border-radius: 5px;
+    top: 90%;
+    left: 50%;
+    position: fixed;
+}
+
+.savebtn:active {
+    border: solid 3px dodgerblue;
+    box-shadow: 0 0 15px lightskyblue;
+    -moz-box-shadow: 0 0 15px lightskyblue;
+    -webkit-box-shadow: 0 0 15px lightskyblue;
+    -o-box-shadow: 0 0 15px lightskyblue;
+}
+
+.cancelbtn {
+    font-size: 20px;
+    color: white;
+    padding: 10px 1%;
+    background-color: grey;
+    border-radius: 5px;
+    top: 90%;
+    left: 56%;
+    position: fixed;
+}
+
+#unit {
+    text-align: center;
+}
