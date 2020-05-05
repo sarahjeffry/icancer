@@ -20,7 +20,7 @@ Auth::routes();
 //Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
 Route::get('/report', function () {
-    return view('report');
+    return view('report', compact('patients'));
 });
 
 Route::get('/patients', function () {

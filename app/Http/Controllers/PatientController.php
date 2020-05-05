@@ -29,6 +29,7 @@ class PatientController extends Controller
     public function create()
     {
         //
+        return view(dashboard);
     }
 
     /**
@@ -66,6 +67,7 @@ class PatientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         //
@@ -77,19 +79,16 @@ class PatientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($MRN)
+    public function edit(Patient $patient)
     {
-        //create new page
-        //pass data dari selected id
-        $task = Patient::find($MRN);
-        //dd($task);
-
+        $arr['patient'] = $patient;
 
 //        $task = Patient::where('id', $id)->first();
 //        $task = Patient::where('user_id', 1)->first(); //return object
 //        $task = Patient::where('user_id', 1)->get(); //return collection; array of object
-        return view('patients.edit_patient', compact('patients'));
 
+
+        return view('patients.edit_patient', compact('patient'));
     }
 
     /**
@@ -115,7 +114,7 @@ class PatientController extends Controller
             'Smoking'   => $request->Smoking
         ]);
 
-        return redirect()->route(patient.index);
+        return redirect()->route('addPatient.index')->with('success','Post created success');
         //return redirect('task');
     }
 

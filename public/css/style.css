@@ -277,6 +277,9 @@ th {
   border-left: 3px solid black;
   border-right: 3px solid black;
 }
+.username {
+    color: #C8D6E5;
+}
 
 .tablepatient tr:nth-child(even) {
   background-color: lightskyblue;
