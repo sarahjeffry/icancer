@@ -98,10 +98,10 @@ class PatientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $MRN)
+    public function update(Request $request, $id)
     {
         //
-        $patient = Patient::find($MRN);
+        $patient = Patient::find($id);
         $patient->update([
             'Name'      => $request->name, //name=column name in database
             'NRIC'      => $request->NRIC,

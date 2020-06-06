@@ -4,24 +4,36 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>IIUM Medical Centre</title>
 
-    <link rel="stylesheet" href="{{ asset('css\style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css\formstyle.css') }}">
-    <link rel="stylesheet" href="{{ asset('css\login.css') }}">
 
+    <link rel="stylesheet" href="{{ asset('css\formstyle.css') }}">
 
 </head>
 
-<style>
-    .loginDetails {
-        position: fixed;
-        top: 10px;
-        right: 20px;
-        color: white;
-        text-decoration: none;
-    }
-
-</style>
+<div class="smallnav">
+    <table class="tabletitle" style="width: 90%;">
+        <tr>
+            <td>Data Visualisation</td>
+            <!--CLOCK & DATE   <span id="date"></span> -->
+            <td class="alignRight"><body onload="startTime()"><span id="clock"></span></td>
+        </tr>
+    </table>
+</div>
 @include('layouts.navbar')
+<!-- The sidebar -->
+<div class="sidebar" align="center">
+    <br><br><br>
+    <img src="https://i.imgur.com/07FaaV4.png" class="idlogo" alt="ID_picture">
+    <br>
+    <!--CONSULTANT OR NURSE-->
+    <font color="#C8D6E5">Consultant</font>
+    <br><br><br>
+    <a class="active" href="#"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
+    <a href="\patients"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
+    <a href="\addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
+    <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
+    <br><br><br><br>
+</div>
+<p class="watermark">iCancer</p>
 
 <body>
 <div class="loginDetails">
