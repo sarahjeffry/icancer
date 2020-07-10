@@ -36,19 +36,30 @@
 <p class="watermark">iCancer</p>
 
 <body>
+{{--<div class="loginDetails">--}}
+{{--    <div class="dropdown" style="float:right;">--}}
+{{--        @if (Route::has('login'))--}}
+{{--            <button class="dropbtn">PROFILE</button>--}}
+{{--            <div class="dropdown-content">--}}
+{{--                <a href=" {{ url('/') }} "> ID </a>--}}
+{{--                <font style="color: black;">Staff_ID</font>--}}
+{{--                <a href=" {{ url('/logout') }}"> Log Out</a>--}}
+{{--            </div>--}}
+{{--        @endif--}}
+{{--    </div>--}}
+{{--</div>--}}
+
 <div class="loginDetails">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href=" {{ url('/') }} "> Dashboard </a>
+    <div class="dropdown" style="float:right;">
+        @if (Route::has('login'))
+            <button class="dropbtn">Staff_ID</button>
+            <div class="dropdown-content">
                 <a href=" {{ url('/logout') }}"> Log Out</a>
-            @else
-                <a href=" {{ route('login') }} "> Login </a>
-                <a href=" {{ route('register') }} "> Register </a>
-            @endauth
-        </div>
-    @endif
+            </div>
+        @endif
+    </div>
 </div>
+
 
 @yield('content')
 

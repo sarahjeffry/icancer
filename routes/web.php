@@ -11,6 +11,15 @@
 |
 */
 
+
+Route::get('/', function () {
+
+    if(Auth::check()) {
+        return view('auth.login');
+    }
+
+});
+
 Route::get('/home', function () {
     return view('welcome');
 });
@@ -36,7 +45,7 @@ Route::get('/form_statdoses', function () {
 });
 
 Route::get('/new', function () {
-    return view('new-patient');
+    return view('patients.new_patient');
 });
 
 //Route::get('/add', 'PatientController@index');
@@ -63,3 +72,4 @@ Route::resource('patient', 'PatientController')->names('addPatient'); //plural
 //Route::get('add_doc', 'DoctorController@index')->name('temp'); //Route::get('URL','ControllerName@function')->name('routeName');
 
 Route::resource('staff', 'DoctorController')->names('addStaff'); //plural
+

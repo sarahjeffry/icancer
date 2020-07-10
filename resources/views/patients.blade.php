@@ -30,69 +30,6 @@
 <span class="titlepage">LIST OF CANCER PATIENTS</span>
 <span style="color:grey;"> &nbsp &nbsp &nbspSort by: </span>
 <br><br>
-<!--<div class="tablepatient" >
-    <table>
-        <tr>
-            <th>NAME</th>
-            <th>NRIC</th>
-            <th>MRN</th>
-            <th>ROOM NO</th>
-            <th>HEIGHT</th>
-            <th>WEIGHT</th>
-            <th>SEX</th>
-        </tr>
-        <tr>
-            <td>Muhammad Ali</td>
-            <td>870301-10-2101</td>
-            <td>AZ43231</td>
-            <td>3B-25</td>
-            <td>170.4</td>
-            <td>70.0</td>
-            <td>M</td>
-            <td><a href="\Patients-2"><button type="button" class="viewdetailsbtn">View details</button></a></td>
-        </tr>
-        <tr>
-            <td>Raihanah</td>
-            <td>991231-14-2314</td>
-            <td>AH33232</td>
-            <td>3B-30</td>
-            <td>162.7</td>
-            <td>53.0</td>
-            <td>F</td>
-            <td><a href="\Patients-2"><button type="button" class="viewdetailsbtn">View details</button></a></td>
-        </tr>
-        <tr>
-            <td>Sumayyah</td>
-            <td>640405-06-3216</td>
-            <td>BC22132</td>
-            <td>3A-15 </td>
-            <td>154.2</td>
-            <td>49.5</td>
-            <td>F</td>
-            <td><a href="\Patients-2"><button type="button" class="viewdetailsbtn">View details</button></a></td>
-        </tr>
-        <tr>
-            <td>Fatimah Zahrah</td>
-            <td>880505-11-0312</td>
-            <td>BA21365</td>
-            <td>3B-04</td>
-            <td>168.0</td>
-            <td>64.0</td>
-            <td>F</td>
-            <td><a href="\Patients-2"><button type="button" class="viewdetailsbtn">View details</button></a></td>
-        </tr>
-        <tr>
-            <td>Zakwan Ahmad</td>
-            <td>901020-03-0303</td>
-            <td>BE43222</td>
-            <td>3A-16</td>
-            <td>159.4</td>
-            <td>50.3</td>
-            <td>M</td>
-            <td><a href="\Patients-2"><button type="button" class="viewdetailsbtn">View details</button></a></td>
-        </tr>
-    </table>
-</div> -->
 
 <table class="table">
     <thead>
