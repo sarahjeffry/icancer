@@ -6,6 +6,7 @@ html {
   font-size: 20px;
   /*background-color: cyan;*/
   background-color: #ededed;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
@@ -46,8 +47,8 @@ height: 70px;
 .dropbtn {
     background-color: #4CAF50;
     color: white;
-    padding: 16px;
-    font-size: 16px;
+    padding: 8px;
+    font-size: 14px;
     border: none;
     cursor: pointer;
 }
@@ -56,21 +57,25 @@ height: 70px;
     position: relative;
     display: inline-block;
     color: black;
+    z-index: -1;
 }
 
 .dropdown-content {
-    display: none;
+    /*display: none;*/
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
     min-width: 160px;
+    padding: 5px;
+    width: 40px;
+    font-size: 13px;
+    border: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: -1;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
@@ -169,6 +174,11 @@ text-decoration: none;
 
 }
 
+.sides {
+    text-align: left;
+    left: 60px;
+}
+
 /* Active/current link */
 .sidebar a.active {
 background-color: #576574;
@@ -245,6 +255,11 @@ float: none;
   position: absolute;
 }
 
+.AddNewbtn {
+    background-color: royalblue;
+    color: whitesmoke;
+}
+
 .signin {
   font-size: 18px;
   width: 350px;
@@ -259,24 +274,57 @@ float: none;
     margin: 20px;
   }
 
-.AddNewbtn {
-  font-size: 20px;
-  color: white;
-  padding: 1px 20px;
-  background-color: grey;
-  border-radius: 5px;
+.editbtn, .deletebtn, .AddNewbtn {
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.editbtn {
+    background-color: yellow;
+}
+
+.deletebtn {
+    background-color: indianred;
+}
+
+.editbtn:hover, .deletebtn:hover, .AddNewbtn:hover, .savebtn:hover, .cancelbtn:hover {
+    box-shadow: 0 0 0 0.1rem darkgray;
+    transition-duration: 0.2s;
 }
 
 .formbtn {
   font-size: 24px;
-  margin: 6px;
+  margin: 8px;
   color: white;
   padding: 10px 10px;  /*top-bottom  right-left*/  /*top right bottom left*/
-  background-color: #4990cb;
+  background-color: royalblue;
   border-radius: 5px;
   width: 25%;
   right: 40%;
   word-break: break-word;
+  border: none;
+}
+
+
+.formbtn:hover {
+    /*margin-top: 25px;*/
+    /*padding: 12px 30px 10px 30px;*/
+    /*background-color: royalblue;*/
+    /*color: white;*/
+    /*border-radius: 40px;*/
+    /*font-size: 15px;*/
+    border: 1px solid royalblue;
+    box-shadow: 0 0 0 0.2rem darkgray;
+    transition-duration: 0.4s;
+}
+
+.formbtn:active, .editbtn:active, .deletebtn:active, .savebtn:active, .cancelbtn:active, .AddNewbtn:active {
+    transform: scale(0.95);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
 }
 
 .viewdetailsbtn {
@@ -291,7 +339,6 @@ float: none;
   color: black;
 }
 
-
 table {
   align-items: center;
   font-family: arial, sans-serif;
@@ -301,71 +348,45 @@ table {
 }
 
 .tableDetail {
-    padding: 2px 5px 2px 5px;
+    padding: 2px 7px 2px 7px;
+    align-content: center;
+    width: 85%;
     -moz-box-shadow:    2px 2px 3px 4px #ccc;
     -webkit-box-shadow: 2px 2px 3px 4px #ccc;
     box-shadow:         2px 2px 3px 3px #ccc;
 }
 
-th {
-  border: 3px solid black;
+#dataTable tr {
+    border: 2px solid black;
+}
+#dataTable th {
+  border: 1px solid black;
   background-color: #438eca;
   font-size: 17px;
   padding: 2px 5px 2px 5px;
 }
 
-.tablepatient td {
+/*col {*/
+
+/*}*/
+
+.td {
   height: 15px;
   font-size: 15px;
   padding: 8px 29px;
   text-align: center;
-  border-left: 3px solid black;
-  border-right: 3px solid black;
-}
-.username {
-    color: #C8D6E5;
+  border: 1px solid black;
 }
 
-.tablepatient tr:nth-child(even) {
+.tableDetail tr:nth-child(even) {
   background-color: lightskyblue;
 }
 
 .tablepatient tbody>tr>:nth-child(9){
-
   background-color: white;
 }
 
-.tablepatient {
-  align-content: center;
-  width: 85%;
-  padding: 25px;
+
+.username {
+    color: #C8D6E5;
 }
-
-.loginform {
-  width: 400px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-}
-
-.logindetails {
-  font-size: 18px;
-  height: 35px;
-  width: 350px;
-  border-radius: 10px;
-  background-color: #f2f3f4;
-  border: 1px solid #85929e ;
-  padding: 2px 8px;
-  text-decoration: none;
-  color: black;
-}
-
-
-.logins {
-  width: 450px;
-  height: 400px;
-  margin-top: 12%;
-  border-radius: 20px;
-  margin-left: 35%;
-}
-

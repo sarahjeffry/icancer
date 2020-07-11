@@ -30,7 +30,7 @@
                                 <label class="control-label">BMI:</label> <input type="text" name="BMI" style="width: 50px;" value="{{ $patient->BMI }}">&nbsp;&nbsp;&nbsp;
                                 <label class="control-label">Smoking:</label> <input type="text" name="Smoking" style="width: 40px;" value=" {{ $patient->Smoking }}">
                                 <br><br>
-                                <input type="submit" class="btn btn-primary" value="UPDATE">
+                                <input type="submit" class="editbtn" value="UPDATE">
                             </form>
                         </div>
                     </div>

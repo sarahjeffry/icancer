@@ -1,5 +1,8 @@
 <?php
 
+use App\Patient;
+use App\User;
+use App\Employee;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,13 +18,29 @@
 Route::get('/', function () {
 
     if(Auth::check()) {
-        return view('auth.login');
+//        return View::make('welcome')->with('role', '$user');
+
+        $users = User::all();
+        return view('welcome', ['role' => $users]);
     }
 
+    else {
+        return view('auth.login');
+    }
 });
 
 Route::get('/home', function () {
-    return view('welcome');
+
+    if(Auth::check()) {
+        $users = User::all();
+        return view('welcome', ['role' => $users]);
+//        return view('welcome', ['role' => 2]);
+//        Route::resource('welcome', 'UserController')->names('welcome'); //plural
+    }
+
+    else {
+        return view('auth.login');
+    }
 });
 
 Auth::routes();
@@ -33,8 +52,10 @@ Route::get('/report', function () {
 });
 
 Route::get('/patients', function () {
-    return view('patients');
+    $patients = Patient::all();
+    return view('patients.new_patient', ['patients' => $patients]);
 });
+
 
 Route::get('/addRecord', function () {
     return view('addRecord');
@@ -71,5 +92,21 @@ Route::resource('patient', 'PatientController')->names('addPatient'); //plural
 
 //Route::get('add_doc', 'DoctorController@index')->name('temp'); //Route::get('URL','ControllerName@function')->name('routeName');
 
-Route::resource('staff', 'DoctorController')->names('addStaff'); //plural
+//Route::resource('staff', 'DoctorController')->names('addStaff'); //plural
 
+/*
+|--------------------------------------------------------------------------
+| ELOQUENT
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/find', function() {
+
+    $patients = Patients::all();
+
+    foreach($patients as $patient) {
+
+        return $patient->Name;
+    }
+
+});

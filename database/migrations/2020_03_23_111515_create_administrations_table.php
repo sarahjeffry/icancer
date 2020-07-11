@@ -15,10 +15,12 @@ class CreateAdministrationsTable extends Migration
     {
         Schema::create('administrations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('treatID')->unique();
+            $table->string('StaffID');
             $table->string('MRN');
             $table->string('Drug Name');
             $table->time('Time');
-            $table->float('Dose', 4,3);
+            $table->float('Dose', 4, 3);
             $table->integer('Frequency');
             $table->timestamps();
         });

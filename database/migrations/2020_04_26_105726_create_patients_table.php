@@ -16,13 +16,14 @@ class CreatePatientsTable extends Migration
         Schema::create('Patients', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('Name');
-            $table->integer('NRIC')->unsigned();
-            $table->unique('MRN');
+            $table->string('NRIC');
+            $table->string('MRN')->unique();
             $table->text('Sex');
-            $table->float('Height', 3, 2)->nullable();
-            $table->float('Weight', 3, 2)->nullable();
-            $table->float('BMI', 2,2)->nullable();
-            $table->string('Cancer Type');
+            $table->float('Height')->nullable();
+            $table->float('Weight')->nullable();
+            $table->float('BMI')->nullable();
+            $table->string('Type');
+            $table->string('Smoking')->nullable();
             $table->timestamps();
         });
     }

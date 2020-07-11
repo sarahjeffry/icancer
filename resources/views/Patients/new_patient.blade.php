@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main_patient')
 
 @section('content')
 
@@ -10,17 +10,17 @@
                 <h3 class="card-header">Insert Patient Details</h3>
                 <div class="card-body">
 {{--            <label class="control-label">ID</label> <input type="text" name="id" style="width: 50px;">--}}
-                    <label class="control-label">Name:</label> <input type="text" name="name" style="width: 300px;"> &nbsp;&nbsp;&nbsp;
-                    <label class="control-label">NRIC:</label> <input type="text" name="NRIC" style="width: 200px;">&nbsp;&nbsp;&nbsp;
-                    <label class="control-label">Sex:</label> <input type="text" name="Sex" style="width: 60px;">&nbsp;<br><br>
-                    <label class="control-label">MRN:</label> <input type="text" name="MRN" style="width: 150px;">
-                    <label class="control-label">Height:</label> <input type="text" name="Height" style="width: 50px;">&nbsp;
-                    <label class="control-label">Weight:</label> <input type="text" name="Weight" style="width: 50px;">
-                    <label class="control-label">Cancer Type:</label> <input type="text" name="Cancer" style="width: 90px;">
-                    <label class="control-label">BMI:</label> <input type="text" name="BMI" style="width: 50px;">&nbsp;&nbsp;&nbsp;
-                    <label class="control-label">Smoking:</label> <input type="text" name="Smoking" style="width: 40px;">
+                    <label class="control-label">Name:</label> <input type="text" required name="name" style="width: 300px;" > &nbsp;&nbsp;&nbsp;
+                    <label class="control-label">NRIC:</label> <input type="text" required name="NRIC" style="width: 200px;">&nbsp;&nbsp;&nbsp;
+                    <label class="control-label">Sex:</label> <input type="text" required name="Sex" style="width: 60px;">&nbsp;<br><br>
+                    <label class="control-label">MRN:</label> <input type="text" required name="MRN" style="width: 150px;">
+                    <label class="control-label">Height:</label> <input type="text" required name="Height" style="width: 50px;">&nbsp;
+                    <label class="control-label">Weight:</label> <input type="text" required name="Weight" style="width: 50px;">
+                    <label class="control-label">Cancer Type:</label> <input type="text" required name="Type" style="width: 90px;">
+                    <label class="control-label">BMI:</label> <input type="text" required name="BMI" style="width: 50px;">&nbsp;&nbsp;&nbsp;
+                    <label class="control-label">Smoking:</label> <input type="text" required name="Smoking" style="width: 40px;">
                     <br><br>
-                    <input type="submit" class="btn btn-primary" value="Add">
+                    <input type="submit" class="AddNewbtn" value="Add">
                 </div>
             </div>
         </form>
@@ -47,40 +47,43 @@
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">BMI</th>
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Cancer Type</th>
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Smoking?</th>
-                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Action</th>
+                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col" colspan="2">Action</th>
                     </tr>
                 </thead>
 
                             {{--@foreach ($users as $user)
                                 <p>This is user {{ $user->id }}</p>
                             @endforeach--}}
-                @foreach($patients as $detail)
-                    <tr class="tablepatient">
-                        <th scope="row" style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->id}}</th>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->Name}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->NRIC}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->MRN}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->Sex}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->Height}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->Weight}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->BMI}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->Cancer}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail->Smoking}}</td>
+                @foreach($patients as $patient)
+                    <tr class="">
+                        <th scope="row" style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->id}}</th>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Name}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->NRIC}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->MRN}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Sex}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Height}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Weight}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->BMI}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Type}}</td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Smoking}}</td>
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">
-                            <a href="{{ route('addPatient.edit', $detail->id) }}">
-                                <button type="submit" class="btn btn-sm btn-primary">EDIT</button>
+                            <a href="{{ route('addPatient.edit', $patient->id) }}">
+                                <button type="submit" class="editbtn">EDIT</button>
                             </a>
-{{--                            <button type="submit" class="btn btn-sm btn-primary">EDIT</button>--}}
-                            <form action="{{ route('addPatient.destroy', $detail->id) }}" method="POST">
+                        </td>
+                        <td style="text-align: center; padding: 2px 5px 2px 5px;">
+                            <form action="{{ route('addPatient.destroy', $patient->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
-                                <button type="submit" class="btn btn-sm btn-danger">DELETE</button>
+                                <button type="submit" class="deletebtn">DELETE</button>
                             </form>
                         </td>
                     </tr>
                 @endforeach
             </table>
         </div>
+
+
     </div>
 
     <br><br>

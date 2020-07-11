@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../FYPSeries/.idea/FYPSeries.iml" filepath="$PROJECT_DIR$/../FYPSeries/.idea/FYPSeries.iml" />
       <module fileurl="file://$PROJECT_DIR$/../FYPSeries/app/.idea/app.iml" filepath="$PROJECT_DIR$/../FYPSeries/app/.idea/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/icancer.iml" filepath="$PROJECT_DIR$/.idea/icancer.iml" />
-      <module fileurl="file://$USER_HOME$/my-project/.idea/my-project.iml" filepath="$USER_HOME$/my-project/.idea/my-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../icancer2/.idea/icancer2.iml" filepath="$PROJECT_DIR$/../icancer2/.idea/icancer2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../FYPSeries/public/.idea/public.iml" filepath="$PROJECT_DIR$/../FYPSeries/public/.idea/public.iml" />
       <module fileurl="file://$PROJECT_DIR$/../FYPSeries/resources/.idea/resources.iml" filepath="$PROJECT_DIR$/../FYPSeries/resources/.idea/resources.iml" />
       <module fileurl="file://$PROJECT_DIR$/../FYPSeries/routes/.idea/routes.iml" filepath="$PROJECT_DIR$/../FYPSeries/routes/.idea/routes.iml" />

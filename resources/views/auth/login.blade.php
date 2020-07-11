@@ -8,11 +8,12 @@
     <style>
 
         html {
-            background-image: url("http://ai.imgur.com/HVkwOjV.jpg");
+            /*background-image: url("http://ai.imgur.com/HVkwOjV.jpg");*/
+            background-color: #1176C6;
             position: fixed;
             top: 0;
             left: 0;
-
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
             /* Preserve aspect ratio */
             min-width: 100%;
             min-height: 100%;
@@ -23,15 +24,37 @@
             background-size: cover;
         }
 
+        label{
+            font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
         .login-btn
         {
             margin-top: 25px;
-            width: 70%;
-            height: 35px;
-            padding: 10px;
+            padding: 12px 30px 10px 30px;
             background-color: royalblue;
             color: white;
-            border-radius: 10px;
+            border-radius: 40px;
+            font-size: 15px;
+            border: 1px solid royalblue;
+        }
+
+        .login-btn:hover
+        {
+            margin-top: 25px;
+            padding: 12px 30px 10px 30px;
+            background-color: royalblue;
+            color: white;
+            border-radius: 40px;
+            font-size: 15px;
+            border: 1px solid royalblue;
+            box-shadow: 0 0 0 0.2rem darkgrey;
+            transition-duration: 0.4s;
+        }
+
+        .login-btn:active {
+            box-shadow: 0 5px 3px darkgrey;
+            transform: translateY(4px);
         }
 
         .label-login {
@@ -43,74 +66,67 @@
         .loginDetails {
             width: 60%;
             height: 30px;
-
-            border-radius: 5px;
-            border: 1px solid dimgray;
+            border-radius: 30px;
+            border: 1px solid whitesmoke;
             background-color: whitesmoke;
             color: black;
-            padding-left: 15px;
-            margin: auto;
+            padding-left: 25px;
+            margin-top: 8px;
+        }
+
+        .label-login {
+            font-family: -apple-system;
+            color: #3d3e47;
         }
 
         .loginDetails:focus {
-            border: 2px solid dodgerblue;
-            background-color: whitesmoke;
-            border-radius: 5px;
+            color: #495057;
+            background-color: #fff;
+            border-color: #a1cbef;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+        }
+
+        a {
+            text-decoration: none;
+            font-size: small;
         }
 
         .outer-box {
-            background-color: ghostwhite;
-            opacity: 0.85;
+            background-color: lightsteelblue;
+            /*opacity: 0.85;*/
             padding-top: 20px;
             margin: 0 auto;
+            padding-bottom: 20px;
             position: absolute;
             top: 50%;
             left: 50%;
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             width: 450px;
-            height: 480px;
             border-radius: 25px;
             text-align: center;
 
-        }
-
-        /* Style the navigation bar */
-        .nav {
-            width: 100%;
-            display: flex;
-            align-items:center;
-            background-color: #1176C6;
-            font-family: calibri;
-            font-size: 35px;
-            color: white;
-            position: fixed;
-            padding-left: 130px;
-            top: 0;
-            left: 0;
-            height: 70px;
-        }
-
-        .nav img {
-            width: 50px;
-            height: 54px;
         }
     </style>
 
 </head>
 
-<div class="nav">
-    <img src="https://i.imgur.com/DxiSrK9.png" alt="Clinic logo"> <span> &nbsp&nbsp IIUM MEDICAL CENTRE</span>
-</div>
+{{--<div class="nav">--}}
+{{--    <img src="https://i.imgur.com/DxiSrK9.png" alt="Clinic logo"> <span> &nbsp&nbsp IIUM MEDICAL CENTRE</span>--}}
+{{--</div>--}}
 
     <div class="outer-box">
-        <div class="col-md-8">
-            <div class="card">
+
 {{--                <div class="card-header">{{ __('Logins') }}</div>--}}
 
 {{--                <div class="backgrounds">--}}
 
-                <center><img src="http://icons.iconarchive.com/icons/mahm0udwally/all-flat/128/User-icon.png"/> </center>
+{{--                <center><img src="http://icons.iconarchive.com/icons/mahm0udwally/all-flat/128/User-icon.png"/> </center>--}}
+                <center><img src="https://i.imgur.com/DxiSrK9.png" width="25%" height="25%" alt="Clinic logo">
+                    <br>
+                    <H2 style="font-family: Helvetica;"> &nbsp&nbsp IIUM MEDICAL CENTRE</H2>
+                </center>
                 <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -130,7 +146,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <br><br>
+                            <br>
                             <label for="password" class="label-login">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
@@ -145,34 +161,27 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check" style="text-align: center;">
-                                    <input class="label-login" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                    <label class="label-login" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
+                        <div class="form-check" style="text-align: center;">
+                            <input class="label-login" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <label class="label-login" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4" style="text-align: center;">
+                        <div class="form-group row mb-0" style="text-align: center;">
                                 <button type="submit" class="login-btn">
                                     {{ __('Login') }}
                                 </button>
-                                <br><br>
+                                <br>
                                 @if (Route::has('password.request'))
                                     <a style="justify-items: center;" class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
-                            </div>
                         </div>
 
                     </form>
 {{--                </div>--}}
-            </div>
-        </div>
+
     </div>
 </html>

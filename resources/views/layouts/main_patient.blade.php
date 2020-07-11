@@ -6,7 +6,7 @@
 
 
     <link rel="stylesheet" href="{{ asset('css\formstyle.css') }}">
-{{--    <link rel="stylesheet" href="{{ asset('css\dataTables.bootstrap4.min.css') }}">--}}
+    <link rel="stylesheet" href="{{ asset('css\dataTables.bootstrap4.min.css') }}">
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -30,12 +30,10 @@
     <!--CONSULTANT OR NURSE-->
     <font color="#C8D6E5">Consultant</font>
     <br><br><br>
-    <div class="sides">
-        <a class="active" href="#"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
-        <a href="\patients"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
-        <a href="\addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
-        <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Appointment</a>
-    </div>
+    <a href="\"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
+    <a class="active" href="#"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
+    <a href="\addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
+    <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
     <br><br><br><br>
 </div>
 <p class="watermark">iCancer</p>

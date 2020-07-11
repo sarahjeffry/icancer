@@ -20,10 +20,12 @@
     <!--CONSULTANT OR NURSE-->
     <span class="username">Consultant</span>
     <br><br><br>
-    <a href="/"> <img alt="sidebar" src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
-    <a href="/addPatient"> <img alt="sidebar" src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
-    <a href="/addRecord"> <img alt="sidebar" src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
-    <a class="active" href="#"> <img alt="sidebar" src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
+    <div class="sides">
+        <a href="/home"> <img alt="sidebar" src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
+        <a href="/addPatient"> <img alt="sidebar" src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
+        <a href="/addRecord"> <img alt="sidebar" src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
+        <a class="active" href="#"> <img alt="sidebar" src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Appointment</a>
+    </div>
     <br><br><br><br>
 </div>
 
@@ -61,20 +63,20 @@
         {{--@foreach ($users as $user)
             <p>This is user {{ $user->id }}</p>
         @endforeach--}}
-        @foreach($patients as $patient)
-            <tr class="tablepatient">
-                <th scope="row" style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['id']}}</th>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Name']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['NRIC']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail['MRN']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Sex']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Height']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Weight']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['BMI']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Cancer']}}</td>
-                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Smoking']}}</td>
-            </tr>
-        @endforeach
+{{--        @foreach($patients as $patient)--}}
+{{--            <tr class="tablepatient">--}}
+{{--                <th scope="row" style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['id']}}</th>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Name']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['NRIC']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$detail['MRN']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Sex']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Height']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Weight']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['BMI']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Cancer']}}</td>--}}
+{{--                <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient['Smoking']}}</td>--}}
+{{--            </tr>--}}
+{{--        @endforeach--}}
     </table>
 </div>
 </body>

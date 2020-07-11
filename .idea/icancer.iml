@@ -99,6 +99,7 @@
     <orderEntry type="module" module-name="routes" />
     <orderEntry type="module" module-name="app" />
     <orderEntry type="module" module-name="public" />
-    <orderEntry type="module" module-name="my-project" />
+    <orderEntry type="module" module-name="FYPSeries" />
+    <orderEntry type="module" module-name="icancer2" />
   </component>
 </module>

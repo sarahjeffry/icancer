@@ -13,6 +13,11 @@ class PatientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         //
@@ -52,7 +57,7 @@ class PatientController extends Controller
             'Height'    => $request->Height,
             'Weight'    => $request->Weight,
             'BMI'       => $request->BMI,
-            'Cancer'    => $request->Cancer,
+            'Type'    => $request->Type,
             'Smoking'   => $request->Smoking
         ]);
 
@@ -110,11 +115,12 @@ class PatientController extends Controller
             'Height'    => $request->Height,
             'Weight'    => $request->Weight,
             'BMI'       => $request->BMI,
-            'Cancer'    => $request->Cancer,
+            'Type'    => $request->Type,
             'Smoking'   => $request->Smoking
         ]);
 
-        return redirect()->route('addPatient.index')->with('success','Post created success');
+        $patient = Patient::all();
+        return redirect()->route('patients.new_patient', compact('patient'));
         //return redirect('task');
     }
 

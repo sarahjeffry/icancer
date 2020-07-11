@@ -20,17 +20,19 @@
     <!--CONSULTANT OR NURSE-->
     <font color="#C8D6E5">Consultant</font>
     <br><br><br>
-    <a href="/"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
-    <a href="/add"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
-    <a class="active" href="addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
-    <a href="/report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
+    <div class="sides">
+        <a href="/home"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
+        <a href="/patient"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
+        <a class="active" href="addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
+        <a href="/report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Appointment</a>
+    </div>
     <br><br><br><br>
 </div>
 <p class="watermark">iCancer</p>
 
 <body>
 <br>
-<span class="titlepage">Add new record of $name</span>
+<span class="titlepage">Choose type of record</span>
 <br><br><br><br>
 <center>
     <a href="/form_statdoses"><button type="button" class="formbtn">STAT DOSES</button></a>
