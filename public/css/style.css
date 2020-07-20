@@ -53,36 +53,46 @@ height: 70px;
     cursor: pointer;
 }
 
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
-    color: black;
-    z-index: -1;
 }
 
 .dropdown-content {
-    /*display: none;*/
+    display: none;
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
     min-width: 160px;
-    padding: 5px;
-    width: 40px;
-    font-size: 13px;
-    border: none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: -1;
+    z-index: 1;
 }
 
 .dropdown-content a {
     color: black;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown-content a:hover {background-color: #f1f1f1;}
-.dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 
 /* --- END OF DROP DOWN FOR LOGIN/REGISTER --- */
 
@@ -106,7 +116,6 @@ height: 70px;
   width: 50px;
   height: 54px;
 }
-
 
 .smallnav {
 left: 19%;
@@ -174,21 +183,22 @@ text-decoration: none;
 
 }
 
-.sides {
+.sides a {
     text-align: left;
-    left: 60px;
+    margin-left: 10px;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Active/current link */
 .sidebar a.active {
-background-color: #576574;
-color: #C8D6E5;
+    background-color: #576574;
+    color: #C8D6E5;
 }
 
 /* Links on mouse-over */
-.sidebar a:hover:not(.active) {
-background-color: #576574;
-color: #C8D6E5;
+.sidebar a:hover {
+    background-color: #576574;
+    color: #C8D6E5;
 }
 
 .icons {
@@ -274,11 +284,15 @@ float: none;
     margin: 20px;
   }
 
-.editbtn, .deletebtn, .AddNewbtn {
+.editbtn, .deletebtn, .AddNewbtn, .viewbtn {
     padding: 7px 10px;
     border-radius: 5px;
     border: none;
     font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.viewbtn {
+    background-color: limegreen;
 }
 
 .editbtn {
@@ -289,7 +303,7 @@ float: none;
     background-color: indianred;
 }
 
-.editbtn:hover, .deletebtn:hover, .AddNewbtn:hover, .savebtn:hover, .cancelbtn:hover {
+.editbtn:hover, .deletebtn:hover, .AddNewbtn:hover, .savebtn:hover, .cancelbtn:hover, .viewbtn:hover {
     box-shadow: 0 0 0 0.1rem darkgray;
     transition-duration: 0.2s;
 }
@@ -320,7 +334,7 @@ float: none;
     transition-duration: 0.4s;
 }
 
-.formbtn:active, .editbtn:active, .deletebtn:active, .savebtn:active, .cancelbtn:active, .AddNewbtn:active {
+.formbtn:active, .editbtn:active, .deletebtn:active, .savebtn:active, .cancelbtn:active, .AddNewbtn:active, .viewbtn:active {
     transform: scale(0.95);
     /* Scaling button to 0.98 to its original size */
     box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
@@ -341,16 +355,21 @@ float: none;
 
 table {
   align-items: center;
-  font-family: arial, sans-serif;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   border-collapse: collapse;
-  border: 3px solid black;
   padding: 10px 15px;
+}
+
+.tableDetail th {
+    background-color:darkgray;
+    border: 3px solid black;
 }
 
 .tableDetail {
     padding: 2px 7px 2px 7px;
+    border: 2px solid black;
     align-content: center;
-    width: 85%;
+    width: 95%;
     -moz-box-shadow:    2px 2px 3px 4px #ccc;
     -webkit-box-shadow: 2px 2px 3px 4px #ccc;
     box-shadow:         2px 2px 3px 3px #ccc;
@@ -370,21 +389,18 @@ table {
 
 /*}*/
 
-.td {
+.tableDetail td {
   height: 15px;
   font-size: 15px;
   padding: 8px 29px;
   text-align: center;
-  border: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .tableDetail tr:nth-child(even) {
   background-color: lightskyblue;
 }
 
-.tablepatient tbody>tr>:nth-child(9){
-  background-color: white;
-}
 
 
 .username {

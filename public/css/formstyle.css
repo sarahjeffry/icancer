@@ -39,13 +39,38 @@
 }
 
 .ptdetails {
-
     width: 1000px;
     border-radius: 10px;
-    padding: 20px 10px 20px 20px; /*TOP RIGHT BOTTOM LEFT*/
+    padding: 5px 5px 5px 5px; /*TOP RIGHT BOTTOM LEFT*/
     height: 150px;
     margin: 10px;
 
+}
+
+.viewtable {
+    background-color: darkgray;
+    border-radius: 10px;
+    box-shadow: 0 0 0 0.2rem lightgray;
+    border: none;
+}
+
+.viewtable th, td {
+    /*padding: 3px 12px 3px 10px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.viewtable th {
+    /*background-color: cornflowerblue;*/
+    text-align: right;
+    padding-left: 15px;
+    padding-right: 5px;
+}
+
+.viewtable td {
+    /*background-color: whitesmoke;*/
+    padding-left: 7px;
+    padding-right: 10px;
 }
 
 /* Chrome, Safari, Edge, Opera */

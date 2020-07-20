@@ -22,7 +22,7 @@
     <br><br><br>
     <div class="sides">
         <a href="/home"> <img alt="sidebar" src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
-        <a href="/addPatient"> <img alt="sidebar" src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
+        <a href="/patients"> <img alt="sidebar" src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
         <a href="/addRecord"> <img alt="sidebar" src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
         <a class="active" href="#"> <img alt="sidebar" src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Appointment</a>
     </div>

@@ -41,4 +41,16 @@ class User extends Authenticatable
     {
         // TODO: Implement resolveChildRouteBinding() method.
     }
+
+    public function UserHasRole($role_name) {
+        foreach ($this->roles as $role) {
+            if($role_name == $role->Name)
+                return true;
+        }
+        return false;
+    }
+
+    public function count() {
+
+    }
 }

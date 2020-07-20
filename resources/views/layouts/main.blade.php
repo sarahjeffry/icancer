@@ -4,8 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>IIUM Medical Centre</title>
 
-
+    <link rel="stylesheet" href="{{ asset('css\style.css') }}">
     <link rel="stylesheet" href="{{ asset('css\formstyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('css\dropdown-style.css') }}">
+
+    @yield('styles')
 {{--    <link rel="stylesheet" href="{{ asset('css\dataTables.bootstrap4.min.css') }}">--}}
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -15,7 +18,7 @@
 <div class="smallnav">
     <table class="tabletitle" style="width: 90%;">
         <tr>
-            <td>Data Visualisation</td>
+            <td>Visualizations</td>
             <!--CLOCK & DATE   <span id="date"></span> -->
             <td class="alignRight"><body onload="startTime()"><span id="clock"></span></td>
         </tr>
@@ -31,10 +34,10 @@
     <font color="#C8D6E5">Consultant</font>
     <br><br><br>
     <div class="sides">
-        <a class="active" href="#"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
+        <a class="active" href="#"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Dashboard</a>
         <a href="\patients"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
         <a href="\addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
-        <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Appointment</a>
+        <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
     </div>
     <br><br><br><br>
 </div>
@@ -42,38 +45,13 @@
 
 <body>
 
-
-<div class="loginDetails">
-{{--    <div class="dropdown" style="float:right;">--}}
-{{--        @if (Route::has('login'))--}}
-{{--            <button class="dropbtn">Staff_ID</button>--}}
-{{--            <div class="dropdown-content">--}}
-{{--                <a href=" {{ url('/logout') }}"> Log Out</a>--}}
-{{--            </div>--}}
-{{--        @endif--}}
-{{--    </div>--}}
-
-    <div class="loginDetails">
-        <div class="dropdown" style="float:right;">
-            @if (Route::has('login'))
-                <button class="dropbtn">PROFILE</button>
-                <div class="dropdown-content">
-{{--                    <a href=" {{ url('/') }} "> ID </a>--}}
-                    <span style="float: right;">ID</span> <br>
-                    <a href=" {{ url('/logout') }}" style="float: right;"> Log Out</a>
-                </div>
-            @endif
-        </div>
-    </div>
-</div>
-
-
-
 @yield('content')
 
+<script src="{{ asset('public\js\dropdown-style.js') }}"></script>
 <script src="{{ asset('public\js\script.js') }}"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+@yield('scripts')
+{{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>--}}
+{{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>--}}
 </body>
 </html>

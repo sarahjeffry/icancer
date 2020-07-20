@@ -24,8 +24,10 @@
             background-size: cover;
         }
 
-        label{
+
+        .label-login {
             font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            color: #3d3e47;
         }
 
         .login-btn
@@ -48,13 +50,14 @@
             border-radius: 40px;
             font-size: 15px;
             border: 1px solid royalblue;
-            box-shadow: 0 0 0 0.2rem darkgrey;
+            box-shadow: 0 0 0 0.2rem ghostwhite;
             transition-duration: 0.4s;
         }
 
         .login-btn:active {
-            box-shadow: 0 5px 3px darkgrey;
+            box-shadow: 0 5px 3px whitesmoke;
             transform: translateY(4px);
+            border: none;
         }
 
         .label-login {
@@ -74,17 +77,13 @@
             margin-top: 8px;
         }
 
-        .label-login {
-            font-family: -apple-system;
-            color: #3d3e47;
-        }
-
         .loginDetails:focus {
             color: #495057;
             background-color: #fff;
             border-color: #a1cbef;
             outline: 0;
-            box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);
+            box-shadow: 0 0 0 3px dodgerblue ;
+            /*box-shadow: 0 0 0 0.2rem rgba(52, 144, 220, 0.25);*/
         }
 
         a {
@@ -125,7 +124,7 @@
 {{--                <center><img src="http://icons.iconarchive.com/icons/mahm0udwally/all-flat/128/User-icon.png"/> </center>--}}
                 <center><img src="https://i.imgur.com/DxiSrK9.png" width="25%" height="25%" alt="Clinic logo">
                     <br>
-                    <H2 style="font-family: Helvetica;"> &nbsp&nbsp IIUM MEDICAL CENTRE</H2>
+                    <H1> &nbsp&nbsp IIUM MEDICAL CENTRE</H1>
                 </center>
                 <form method="POST" action="{{ route('login') }}">
                         @csrf

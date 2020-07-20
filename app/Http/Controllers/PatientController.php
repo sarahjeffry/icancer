@@ -41,7 +41,7 @@ class PatientController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function store(Request $request)
     {
@@ -57,12 +57,13 @@ class PatientController extends Controller
             'Height'    => $request->Height,
             'Weight'    => $request->Weight,
             'BMI'       => $request->BMI,
-            'Type'    => $request->Type,
-            'Smoking'   => $request->Smoking
+            'Type'      => $request->Type,
+            'Smoking'   => $request->Smoking,
+            'Active'    => $request->Active,
         ]);
 
-        //return view('patients.new_patient', compact('task'));
-        return redirect()->back(); //Navigate balik ke route sebelum ni. Balik ke form page tu. Sebab tu form tu tak berubah page lepas isi.
+        return view('patients.new_patient', compact('patients'));
+//        return redirect()->back(); //Navigate balik ke route sebelum ni. Balik ke form page tu. Sebab tu form tu tak berubah page lepas isi.
     }
 
 
@@ -75,7 +76,9 @@ class PatientController extends Controller
 
     public function show($id)
     {
-        //
+        $patient = Patient::find($id);
+
+        return view('patients.view_patient', compact('patient'));
     }
 
     /**
@@ -106,8 +109,9 @@ class PatientController extends Controller
     public function update(Request $request, $id)
     {
         //
-        $patient = Patient::find($id);
-        $patient->update([
+        $patients = Patient::find($id);
+
+        $patients->update([
             'Name'      => $request->name, //name=column name in database
             'NRIC'      => $request->NRIC,
             'MRN'       => $request->MRN,
@@ -115,12 +119,14 @@ class PatientController extends Controller
             'Height'    => $request->Height,
             'Weight'    => $request->Weight,
             'BMI'       => $request->BMI,
-            'Type'    => $request->Type,
-            'Smoking'   => $request->Smoking
+            'Type'      => $request->Type,
+            'Smoking'   => $request->Smoking,
+            'Active'    => $request->Active,
         ]);
 
-        $patient = Patient::all();
-        return redirect()->route('patients.new_patient', compact('patient'));
+//        $patient = Patient::all();
+//        return redirect()->route('patients.new_patient', compact('patient'));
+        return view('patients.new_patient', compact('patients'));
         //return redirect('task');
     }
 

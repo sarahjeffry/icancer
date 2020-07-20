@@ -15,7 +15,7 @@
 <div class="smallnav">
     <table class="tabletitle" style="width: 90%;">
         <tr>
-            <td>Data Visualisation</td>
+            <td>Patients</td>
             <!--CLOCK & DATE   <span id="date"></span> -->
             <td class="alignRight"><body onload="startTime()"><span id="clock"></span></td>
         </tr>
@@ -30,42 +30,17 @@
     <!--CONSULTANT OR NURSE-->
     <font color="#C8D6E5">Consultant</font>
     <br><br><br>
-    <a href="\"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Visualisation</a>
-    <a class="active" href="#"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
-    <a href="\addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
-    <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
+    <div class="sides">
+        <a href="\"> <img src="https://i.imgur.com/rpW1zxn.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Dashboard</a>
+        <a class="active" href="#"> <img src="https://i.imgur.com/fKXQ4Bi.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Patients</a>
+        <a href="\addRecord"> <img src="https://i.imgur.com/aOTh4sZ.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Forms</a>
+        <a href="\report"> <img src="https://i.imgur.com/OMvyX1Y.png" class="icons" >&nbsp &nbsp &nbsp &nbsp Report</a>
+    </div>
     <br><br><br><br>
 </div>
 <p class="watermark">iCancer</p>
 
 <body>
-
-
-<div class="loginDetails">
-{{--    <div class="dropdown" style="float:right;">--}}
-{{--        @if (Route::has('login'))--}}
-{{--            <button class="dropbtn">Staff_ID</button>--}}
-{{--            <div class="dropdown-content">--}}
-{{--                <a href=" {{ url('/logout') }}"> Log Out</a>--}}
-{{--            </div>--}}
-{{--        @endif--}}
-{{--    </div>--}}
-
-    <div class="loginDetails">
-        <div class="dropdown" style="float:right;">
-            @if (Route::has('login'))
-                <button class="dropbtn">PROFILE</button>
-                <div class="dropdown-content">
-{{--                    <a href=" {{ url('/') }} "> ID </a>--}}
-                    <span style="float: right;">ID</span> <br>
-                    <a href=" {{ url('/logout') }}" style="float: right;"> Log Out</a>
-                </div>
-            @endif
-        </div>
-    </div>
-</div>
-
-
 
 @yield('content')
 

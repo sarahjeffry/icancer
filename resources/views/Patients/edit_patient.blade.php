@@ -16,7 +16,7 @@
                         <div class="card-body">
                             {{--                            <label class="control-label">ID</label> <input type="text" name="id" class="form-control">--}}
 
-                            <form action="{{ route('addPatient.update', $patient->MRN) }}" method="PATCH">
+                            <form action="{{ route('addPatient.update', $patient->id) }}" method="PATCH">
                                 {{ csrf_field() }}
                                 {{ method_field('POST') }}
 
@@ -26,11 +26,13 @@
                                 <label class="control-label">MRN:</label> <input type="text" name="MRN" style="width: 150px;" value="{{ $patient->MRN }}">
                                 <label class="control-label">Height:</label> <input type="text" name="Height" style="width: 50px;" value="{{ $patient->Height }}">&nbsp;
                                 <label class="control-label">Weight:</label> <input type="text" name="Weight" style="width: 50px;" value="{{ $patient->Weight }}">
-                                <label class="control-label">Cancer Type:</label> <input type="text" name="Cancer" style="width: 90px;" value="{{ $patient->Cancer }}">
+                                <label class="control-label">Cancer Type:</label> <input type="text" name="Cancer" style="width: 90px;" value="{{ $patient->Type }}">
                                 <label class="control-label">BMI:</label> <input type="text" name="BMI" style="width: 50px;" value="{{ $patient->BMI }}">&nbsp;&nbsp;&nbsp;
                                 <label class="control-label">Smoking:</label> <input type="text" name="Smoking" style="width: 40px;" value=" {{ $patient->Smoking }}">
                                 <br><br>
-                                <input type="submit" class="editbtn" value="UPDATE">
+
+                                <input type="submit" value="UPDATE" class="editbtn"></input>
+
                             </form>
                         </div>
                     </div>
@@ -40,5 +42,7 @@
             </div>
         </div>
     </div>
+
+    <a href="{{route('addPatient.show', $patient->id)}}"><button type="button" class="backbtn">⬅</button></a>
 
 @endsection

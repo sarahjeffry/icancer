@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VISUALIZATIONS</title>
+
+    <style>
+        .cards {
+            color: black;
+            width:350px; height: 350px;
+            margin: 25px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 23px 13px;
+            box-shadow: 0 0 5px 5px darkgrey;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="outer-card" style="clear: both;">
+
+    <table>
+        <thead>
+        <td>
+            <h3>Demographic</h3>
+        </td>
+        <td>
+            <h3>Correlation</h3>
+        </td>
+        <td>
+            <h3>Trends</h3>
+        </td>
+        </thead>
+        <td>
+            <div class="cards" >
+                <canvas id="demographic" width="70" height="70"></canvas>
+            </div>
+        </td>
+        <td>
+            <div class="cards" >
+                <canvas id="myChart" width="70" height="70"></canvas>
+            </div>
+        </td>
+        <td>
+            <div class="cards" >
+                <canvas id="myChart2" width="70" height="70"></canvas>
+            </div>
+        </td>
+    </table>
+</div>
+
+<script>
+    var chart1 = document.getElementById('demographic').getContext('2d');
+    var demographic = new Chart(chart1, {
+        type: 'bar',
+        data: {
+            labels: ['Breast', 'Lung', 'Pancreas', 'Skin'],
+            datasets: [{
+                label: 'Female',
+                data: [43, 12, 13, 5],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 3
+            },
+                {
+                    label: 'Male',
+                    data: [8, 32, 16, 7],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 3
+                }]
+
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                }],
+                yAxes: [{
+                    stacked: true,
+                }]
+            }
+        });
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: {
+            labels: ['Breast', 'Lung', 'Pancreas', 'Skin'],
+            datasets: [{
+                label: 'Number of cancer deaths by type',
+                data: [123, 192, 35, 54],
+                backgroundColor: [
+                    'pink',
+                    'royalblue',
+                    'orange',
+                    'lightgreen'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1,
+                barThickness: 36,
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+    var ctx2 = document.getElementById('myChart2').getContext('2d');
+    var myChart2 = new Chart(ctx2, {
+        labels: 'Cancer death rate',
+        type: 'line',
+        data: {
+            labels: ['2018','2019','2020'],
+            datasets: [{
+                label: 'Breast',
+                data: [76,13],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                ],
+                borderWidth: 2,
+                barThickness: 6,
+            },
+                {
+                    label: 'Lung',
+                    data: [12,53],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 2,
+                    barThickness: 6,
+                },
+                {
+                    label: 'Pancreas',
+                    data: [34,33],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 2,
+                    barThickness: 6,
+                },
+                {
+                    label: 'Skin',
+                    data: [12,16],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 2,
+                    barThickness: 6,
+                }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: false
+                    }
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>
