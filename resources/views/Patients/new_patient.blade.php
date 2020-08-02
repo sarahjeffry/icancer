@@ -56,9 +56,9 @@
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">NRIC</th>
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">MRN</th>
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Sex</th>
-                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Height</th>
-                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Weight</th>
-                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">BMI</th>
+{{--                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Height</th>--}}
+{{--                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Weight</th>--}}
+{{--                        <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">BMI</th>--}}
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Cancer Type</th>
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col">Smoking?</th>
                         <th style="text-align: center; padding: 2px 5px 2px 5px;" scope="col" colspan="3">Action</th>
@@ -75,9 +75,9 @@
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->NRIC}}</td>
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->MRN}}</td>
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Sex}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Height}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Weight}}</td>
-                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->BMI}}</td>
+{{--                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Height}}</td>--}}
+{{--                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Weight}}</td>--}}
+{{--                        <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->BMI}}</td>--}}
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Type}}</td>
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">{{$patient->Smoking}}</td>
                         <td style="text-align: center; padding: 2px 5px 2px 5px;">

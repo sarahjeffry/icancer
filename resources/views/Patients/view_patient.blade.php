@@ -85,6 +85,7 @@
     </table>
     <br>
 
+{{--    <a href="{{ route('addTreatment.index', $patient->id) }}">--}}
     <a href="{{ route('addTreatment.index', $patient->id) }}">
         <button type="submit" class="AddNewbtn">Add Treatment Record</button>
     </a>

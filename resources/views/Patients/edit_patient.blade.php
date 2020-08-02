@@ -31,7 +31,7 @@
                                 <label class="control-label">Smoking:</label> <input type="text" name="Smoking" style="width: 40px;" value=" {{ $patient->Smoking }}">
                                 <br><br>
 
-                                <input type="submit" value="UPDATE" class="editbtn"></input>
+                                <input type="submit" value="UPDATE" class="editbtn"/>
 
                             </form>
                         </div>

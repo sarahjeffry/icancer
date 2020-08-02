@@ -75,7 +75,6 @@ Route::get('/patients', function () {
 
 Route::get('/addRecord', function () {   //Menu forms
     $patient = Patient::all();
-
     return view('addRecord', compact(patient));
 });
 
